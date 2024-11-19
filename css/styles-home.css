@@ -50,7 +50,7 @@ body {
   overflow: hidden; 
 }
 .hero {
-  background-image: url('/images/bg-snow.png'), url('/images/bg-ball.png'); 
+  background-image: url('../images/bg-snow.png'), url('../images/bg-ball.png'); 
   background-size: cover, contain;
   background-position: center;
   background-repeat: repeat-y, no-repeat;
@@ -90,7 +90,7 @@ body {
 }
 
 .about {
-  background-image: url('/images/bg-snow.png');
+  background-image: url('../images/bg-snow.png');
   background-size: cover;
   background-repeat: repeat-y;
   display: flex;
@@ -139,7 +139,7 @@ body {
   justify-content: center;
 }
 .slider {
-  background-image: url('/images/bg-snow.png');
+  background-image: url('../images/bg-snow.png');
   background-size: cover;
   background-repeat: repeat-y;
   height: 448px;
@@ -147,13 +147,13 @@ body {
 
 
 .best-gifts {
-  background-image: url('/images/bg-snow.png');
+  background-image: url('../images/bg-snow.png');
   background-size: cover; 
   background-repeat: repeat-y;
   height: 554px;
 }
 .cta {
-  background-image: url('/images/bg-snow.png'), url('/images/bg-forest.png');
+  background-image: url('../images/bg-snow.png'), url('../images/bg-forest.png');
   background-size: cover, contain;
   background-position: bottom; 
   background-repeat: repeat-y, no-repeat;
@@ -248,13 +248,13 @@ h4 {
    
   font-family: "Allura"; 
   
-  src: url("/fonts/Allura-Regular.ttf") format("truetype"); 
+  src: url("../fonts/Allura-Regular.ttf") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 
 } 
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat-VariableFont_wght.ttf");
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
   font-style: normal;
   font-weight: normal;
 }
