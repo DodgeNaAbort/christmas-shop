@@ -1,0 +1,933 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Allura";
+  src: url("../fonts/Allura-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1440px) 1fr;
+  grid-template-rows: auto 1fr auto;
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1276px) 1fr;
+}
+
+.container > * {
+  grid-column: 2;
+}
+
+.section_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.section_text {
+  font-family: "Allura", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.section_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 235px;
+  height: 56px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 20px 32px;
+  background: #181c29;
+  transition: all 0.2s ease;
+}
+.section_link:hover {
+  color: #181c29;
+  background: #ffffff;
+}
+
+.header_nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: 64px;
+}
+
+.header_burger--disabled {
+  display: none;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  width: 141px;
+  height: 40px;
+  padding: 0;
+  background: url("../images/logo-snowflake.png") no-repeat;
+  background-size: 22px 24px;
+  background-position: 21px center;
+}
+.header_logo .header_logo-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left: 52px;
+  color: #181c29;
+}
+
+.header_nav-list {
+  display: grid;
+  grid-template-columns: 78px 88px 74px 112px;
+  gap: 0 8px;
+  align-items: center;
+  justify-self: self-end;
+  width: 376px;
+  height: 40px;
+  list-style-type: none;
+}
+.header_nav-list .header_nav-item {
+  height: 100%;
+}
+.header_nav-list .header_nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #181c29;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+.header_nav-list .header_nav-link:hover:not(.header_nav-link--active) {
+  color: #ff4646;
+  background: rgba(255, 70, 70, 0.1);
+}
+.header_nav-list .header_nav-link--active {
+  color: #ff4646;
+  background: rgba(255, 70, 70, 0.1);
+}
+
+.hero {
+  width: 1440px;
+  height: 524px;
+  background: #ff4646;
+  background-image: url("../images/bg-snow.png"), url("../images/bg-ball.png");
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  border-radius: 20px 20px 0 0;
+  padding: 60px 8px;
+}
+
+.hero_explore {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 426px;
+  max-width: 426px;
+  height: 404px;
+  margin: 0 auto;
+}
+.hero_explore .hero_title {
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 0.17em;
+  transform: translateY(13px);
+  order: 2;
+}
+.hero_explore .hero_text--order-up {
+  transform: translateY(40px);
+  order: 1;
+}
+.hero_explore .hero_text--order-down {
+  transform: translateY(-41px);
+  order: 4;
+}
+.hero_explore .hero_link {
+  transform: translateY(-14px);
+  order: 3;
+}
+
+.about {
+  padding: 60px 8px;
+  width: 1440px;
+  height: 648px;
+  background: #ff4646;
+  background-image: url("../images/bg-snow.png");
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+.about_inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-radius: 20px;
+  max-width: 1276px;
+  height: 528px;
+  background: #ffffff;
+}
+
+.about_content {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 60px 0px;
+  width: 426px;
+  height: 328px;
+  max-width: 426px;
+  transform: translateX(60px);
+}
+.about_content .about_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #181c29;
+  transform: translateY(21px);
+  order: 2;
+}
+.about_content .about_text--color {
+  text-align: start;
+  color: #ff4646;
+  order: 1;
+}
+.about_content .about_text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 148%;
+  color: #181c29;
+  transform: translateY(41px);
+  order: 3;
+}
+
+.about_img {
+  border-radius: 20px;
+}
+
+.slider {
+  padding: 60px 8px;
+  width: 1440px;
+  height: 488px;
+  background: #ff4646;
+  background-image: url("../images/bg-snow.png");
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  overflow-x: hidden;
+}
+
+.slider_inner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  max-width: 1276px;
+  height: 368px;
+}
+
+.slider_header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 72px;
+}
+.slider_header .slider_title {
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  transform: translateY(7px);
+  order: 2;
+}
+.slider_header .slider_text {
+  transform: translateY(-6px);
+  order: 1;
+}
+
+.slider_list {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 0 20px;
+  width: 1276px;
+  height: 200px;
+  list-style-type: none;
+}
+.slider_list .slider_list-item {
+  display: grid;
+  grid-template-columns: auto 200px;
+  gap: 0 20px;
+  align-items: center;
+}
+.slider_list .slider_list-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+.slider_list .slider_list-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.slider_controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0 20px;
+  height: 56px;
+}
+.slider_controls .slider_btn {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  background: transparent;
+  opacity: 1;
+}
+.slider_controls .slider_btn--disable {
+  opacity: 0.4;
+}
+.slider_controls .slider_btn--active:hover {
+  transition: all 0.2s ease;
+  background: #ffffff;
+  border-color: transparent;
+  cursor: pointer;
+}
+.slider_controls .slider_btn--active:hover .slider_btn-svg-color {
+  stroke: #ff4646;
+}
+
+.best-gifts {
+  width: 1440px;
+  height: 554px;
+  padding: 60px 8px;
+  background: #ff4646;
+  background-image: url("../images/bg-snow.png");
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+.best-gifts_inner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 1276px;
+  height: 434px;
+  max-width: 1276px;
+}
+
+.best-gifts_header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+.best-gifts_header .best-gifts_title {
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  order: 2;
+}
+.best-gifts_header .best-gifts_text {
+  order: 1;
+}
+
+.best-gifts_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 310px);
+  gap: 12px;
+  height: 342px;
+}
+.best-gifts_cards .best-gifts_card {
+  width: 310px;
+  height: 342px;
+  border-radius: 20px;
+  background: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+}
+.best-gifts_cards .best-gifts_card:hover .best-gifts_card-text {
+  color: #ff4646;
+}
+.best-gifts_cards .best-gifts_card-img {
+  width: 310px;
+  height: 230px;
+  background: #ecf3f8;
+}
+.best-gifts_cards .best-gifts_card-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 17px 0 8px 20px;
+}
+.best-gifts_cards .best-gifts_card-title--work {
+  color: #4361ff;
+}
+.best-gifts_cards .best-gifts_card-title--health {
+  color: #06a44f;
+}
+.best-gifts_cards .best-gifts_card-title--work {
+  color: #4361ff;
+}
+.best-gifts_cards .best-gifts_card-title--harmony {
+  color: #ff43f7;
+}
+.best-gifts_cards .best-gifts_card-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #181c29;
+  margin-left: 20px;
+  transition: all 0.2s ease;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  height: 668px;
+  border-radius: 0 0 20px 20px;
+  padding: 60px 8px;
+  background: #ff4646;
+  background: #ff4646;
+  background-image: url("../images/bg-snow.png"), url("../images/bg-forest.png");
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+.cta .container {
+  justify-items: center;
+  align-items: center;
+}
+
+.cta_inner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0px;
+  width: 426px;
+  height: 428px;
+  max-width: 426px;
+}
+.cta_inner .cta_inner-title {
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+}
+.cta_inner .cta_inner_link {
+  transform: translateY(3px);
+}
+.cta_inner .cta_inner_text {
+  transform: translateY(8px);
+}
+
+.cta_timer-list {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  width: 344px;
+  height: 72px;
+  border-radius: 20px;
+  padding: 8px 12px 12px 12px;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.4);
+}
+.cta_timer-list .cta_timer-item {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 80px;
+  height: 52px;
+}
+.cta_timer-list .cta_timer-item .cta_timer-value {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+.cta_timer-list .cta_timer-item .cta_timer-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.cta_timer-item--border::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  display: block;
+  border: 1px solid #ffffff;
+  width: 0px;
+  height: 20px;
+}
+
+.footer {
+  padding: 60px 8px;
+  width: 1440px;
+  height: 496px;
+  background: #ffffff;
+}
+
+.footer_inner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  max-width: 1276px;
+  height: 376px;
+}
+
+.contacts_list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 417px));
+  gap: 0 12px;
+  height: 204px;
+}
+.contacts_list .contacts_item {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  border-radius: 20px;
+  padding: 20px;
+  width: 417px;
+  height: 204px;
+  background: #ecf3f8;
+  text-decoration: none;
+}
+.contacts_list .contacts_item .contacts_item-img {
+  width: 80px;
+  height: 80px;
+}
+.contacts_list .contacts_item .contacts_item-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #181c29;
+  transform: translate(2px, 13px);
+  transition: all 0.2s ease;
+}
+.contacts_list .contacts_item .contacts_item-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #181c29;
+  transform: translate(1px, 25px);
+  transition: all 0.2s ease;
+}
+.contacts_list .contacts_item:hover .contacts_item-title {
+  color: #ff4646;
+}
+.contacts_list .contacts_item:hover .contacts_item-text {
+  color: #ff4646;
+}
+
+.copyright {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 112px;
+}
+
+.copyright_list {
+  display: grid;
+  grid-template-columns: repeat(4, 40px);
+  gap: 0 12px;
+  width: 196px;
+  height: 40px;
+  list-style-type: none;
+  font-size: 0;
+}
+.copyright_list .copyright_list-item {
+  width: 100%;
+  height: 100%;
+}
+.copyright_list .copyright_list-item .copyright_list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.copyright_list .copyright_list-item .copyright_list-link .social-svg-color {
+  transition: all 0.2s ease;
+}
+.copyright_list .copyright_list-item .copyright_list-link:hover .social-svg-color {
+  stroke: #ff4646;
+}
+
+.copyright_text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 148%;
+  text-align: center;
+  color: #181c29;
+}
+
+.copyright_link {
+  font-family: "Allura", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #181c29;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.copyright_link:hover {
+  color: #ff4646;
+}
+
+.gifts {
+  width: 1440px;
+  height: 1394px;
+  border-radius: 20px;
+  padding: 60px 8px;
+  background: #ff4646 url("../images/bg-garland.png") no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+.gifts_inner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1276px;
+  height: 1274px;
+}
+.gifts_inner .best-gifts_cards {
+  height: auto;
+}
+
+.gifts_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  height: 144px;
+  max-width: 426px;
+}
+
+.gifts_bar-list {
+  display: grid;
+  grid-template-columns: 65px 116px 126px 143px;
+  gap: 0 8px;
+  width: 474px;
+  height: 40px;
+  list-style: none;
+}
+.gifts_bar-list .gifts_bar-item {
+  width: 100%;
+  height: 100%;
+}
+.gifts_bar-list .gifts_bar-item .gifts_bar-btn {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.gifts_bar-list .gifts_bar-item .gifts_bar-btn:hover:not(.gifts_bar-btn--active) {
+  background: rgba(255, 255, 255, 0.2);
+}
+.gifts_bar-list .gifts_bar-item .gifts_bar-btn--active {
+  cursor: default;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/*# sourceMappingURL=main.css.map */
